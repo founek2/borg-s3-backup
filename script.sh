@@ -24,7 +24,7 @@ if [ ! -f "${EXCLUDES_FILE}" ]; then
 fi
 
 # Local borg backup
-borg create repository::work-${BACKUP_VERSION} \
+borg create ${BORG_REPO}::work-${BACKUP_VERSION} \
 	/Users/martas/Work /Users/martas/Documents /Users/martas/projects \
 	-v \
 	--progress \
