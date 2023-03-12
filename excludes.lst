@@ -1,12 +1,3 @@
-# "sh:" pattern style is the default, so the following line is not needed:
-#P sh
-#R /
-# caches most likely
-#- *
-# they're downloads for a reason
-#- Users/*/Downloads
-#+ Users/martas/Work
-
 re:/node_modules
 re:/.yarn/cache
 re:/target/
