@@ -3,7 +3,7 @@ re:/.yarn/cache
 re:/target/
 re:/cmake-build-debug
 re:/.DS_Store
-re:/.git
+#re:/.git
 re:/.pio
 re:/venv/
 re:/.next
