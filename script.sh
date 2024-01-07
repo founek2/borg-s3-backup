@@ -25,7 +25,7 @@ fi
 
 # Local borg backup
 borg create ${BORG_REPO}::work-${BACKUP_VERSION} \
-	/Users/martas/Work /Users/martas/Documents /Users/martas/projects \
+	/var/data /var/deploy \
 	-v \
 	--progress \
 	--stats \
