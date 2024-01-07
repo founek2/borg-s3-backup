@@ -1,11 +1,12 @@
-re:/node_modules
-re:/.yarn/cache
-re:/target/
-re:/cmake-build-debug
-re:/.DS_Store
+## Uncomment to ignoroe general development cache directories
+#re:/node_modules
+#re:/.yarn/cache
+#re:/target/
+#re:/cmake-build-debug
+#re:/.DS_Store
 #re:/.git
-re:/.pio
-re:/venv/
-re:/.next
-re:/.svn
-re:/vendor/
+#re:/.pio
+#re:/venv/
+#re:/.next
+#re:/.svn
+#re:/vendor/
