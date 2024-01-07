@@ -1,8 +1,7 @@
 #!/bin/bash
 
-export BORG_REPO=
 export BORG_S3_BACKUP_BUCKET=
 export AWS_ACCESS_KEY_ID=
 export AWS_SECRET_ACCESS_KEY=
 
-./download.sh $BORG_REPO
+./download.sh $1
