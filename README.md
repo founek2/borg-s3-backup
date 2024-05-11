@@ -13,10 +13,15 @@ borg init --encryption=repokey-blake2 repository
 # recovery 
 ./run_download.sh /home/martas/backup/repository/
 
-borg list repository::work-2023-06-04T00.31 var/deploy
+borg list repository::work-2023-06-04T00.31 var
 
-# this will extract deploy folder `var/deploy` in your cwd
-borg extract repository::work-2023-06-04T00.31 var/deploy
+# this will extract deploy folder `var` in your cwd
+borg extract repository::work-2023-06-04T00.31 var
+
+# now just copy extracted files into target location
+mv var/data /var/data
+mv /var/deploy /var/deploy
+rm -rf var
 ```
 
 ## Features
