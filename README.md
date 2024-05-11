@@ -20,7 +20,7 @@ borg extract repository::work-2023-06-04T00.31 var
 
 # now just copy extracted files into target location
 mv var/data /var/data
-mv /var/deploy /var/deploy
+mv var/deploy /var/deploy
 rm -rf var
 ```
 
