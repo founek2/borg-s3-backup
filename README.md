@@ -14,7 +14,9 @@ borg init --encryption=repokey-blake2 repository
 ./run_download.sh /home/martas/backup/repository/
 
 borg list repository::work-2023-06-04T00.31 var/deploy
-borg extract repository::work-2023-06-04T00.31 var/deploy /var/deploy
+
+# this will extract deploy folder `var/deploy` in your cwd
+borg extract repository::work-2023-06-04T00.31 var/deploy
 ```
 
 ## Features
