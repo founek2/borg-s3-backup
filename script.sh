@@ -25,7 +25,7 @@ fi
 
 # Local borg backup
 borg create ${BORG_REPO}::work-${BACKUP_VERSION} \
-	/var/data /var/deploy \
+	/var/data /var/deploy /etc/fstab \
 	-v \
 	--progress \
 	--stats \
