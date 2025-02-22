@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 export BORG_S3_BACKUP_BUCKET=
 export AWS_ACCESS_KEY_ID=

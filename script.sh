@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 BACKUP_VERSION=$(date +%Y-%m-%dT%H.%M)
 
