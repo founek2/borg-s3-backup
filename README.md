@@ -3,7 +3,9 @@
 This is a script to backup your folders using borg into a local borg repository which is synced into an AWS S3  bucket.
 
 Commands:
-```
+```bash
+git clone https://github.com/founek2/borg-s3-backup.git backup
+
 # Initialize repository
 borg init --encryption=repokey-blake2 repository
 
@@ -136,4 +138,9 @@ sudo systemctl edit docker
 [Service]
 ExecStart=
 ExecStart=/usr/bin/dockerd
+```
+
+## Setup borg jail
+```bash
+pkg install vim git bash py311-borgbackup py311-awscli
 ```
