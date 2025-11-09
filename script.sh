@@ -29,6 +29,7 @@ borg create ${BORG_REPO}::work-${BACKUP_VERSION} \
 	-v \
 	--progress \
 	--stats \
+	--exclude-caches \
 	--exclude-from ${EXCLUDES_FILE} \
 	--compression zlib,6
 
