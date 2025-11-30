@@ -56,4 +56,8 @@ $DOWNLOAD_COMMAND
 printf "\n\n${bold}Backup download success.\nSummary${normal}:\n\n"
 echo "${bold}Cloud service:${normal} ${accent}${CLOUD_SERVICE_NAME}${normal}"
 echo "${bold}Bucket size:${normal} ${accent}${BUCKET_SIZE_GB}${normal}"
+
+echo "Running borg validation"
+borg check $DOWNLOAD_FOLDER
+
 printf "\n\n${bold}Before you can use it with borg, you need to move ${secondary_accent}${DOWNLOAD_FOLDER} ${normal}${bold}to ${secondary_accent}${BORG_REPO}${normal}\n\n"
