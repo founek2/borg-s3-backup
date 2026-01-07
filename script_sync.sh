@@ -8,6 +8,7 @@ fi
 
 # Clean up old backups: keep 7 end of day and 4 additional end of week archives.
 # Prune operation is not important, s3 sync is - do not exit were this to fail
+Echo "Validating repository integrity and compacting..."
 borg check
 borg prune -v --list --keep-daily=7 --keep-weekly=4
 borg compact
