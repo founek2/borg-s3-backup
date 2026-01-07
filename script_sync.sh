@@ -12,7 +12,7 @@ borg check
 borg prune -v --list --keep-daily=7 --keep-weekly=4
 borg compact
 
-SYNC_COMMAND="aws s3 sync ${BORG_REPO} s3://${BORG_S3_BACKUP_BUCKET} --delete"
+SYNC_COMMAND="aws s3 sync ${BORG_REPO} s3://${BORG_S3_BACKUP_BUCKET} --delete --exclude 'lock.exclusive/*'"
 
 # Sync borg repo to s3
 printf "\n\n ** Syncing to AWS bucket ${BORG_S3_BACKUP_BUCKET}...\n"
