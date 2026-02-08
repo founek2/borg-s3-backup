@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.cargo/bin/
+
 set -e
 
 if [ -z "$1" ]; then
