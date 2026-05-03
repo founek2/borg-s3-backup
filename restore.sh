@@ -17,10 +17,11 @@ var/data"
 
 for FOLDER in $FOLDERS; do
   DIRECTORY="$MOUNT_PATH/$LATEST_ARCHIVE/$FOLDER"
-  if [ -d "$FOLDER" ]; then
+  if [ -d "$DIRECTORY" ]; then
+    echo "Restoring $FOLDER from backup..."
     rsync -a --delete "$DIRECTORY/" "/$FOLDER/"
   else
-    echo "Warning: $FOLDER does not exist on the system, skipping restore for this folder."
+    echo "Warning: $FOLDER does not exist in the backup, skipping restore for this folder."
   fi
 done
 
