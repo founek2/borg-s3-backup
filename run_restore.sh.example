@@ -2,7 +2,7 @@
 set -e
 
 export BORG_PASSPHRASE=
-export BORG_S3_BACKUP_BUCKET=
+export BORG_REPO=
 
 if [[ ! "$1" ]]; then
   printf "\n ** Please provide the folder where the backup should be mounted.\n"

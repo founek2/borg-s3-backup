@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 set -e
 
-if [[ ! "$BORG_S3_BACKUP_BUCKET" ]]; then
-  printf "\n ** Please provide with BORG_S3_BACKUP_BUCKET on the environment\n"
+if [[ ! "$BORG_REPO" ]]; then
+  printf "\n ** Please provide with BORG_REPO on the environment\n"
   exit 1
 fi
 
 $MOUNT_PATH=$1
 
-borg mount $BORG_S3_BACKUP_BUCKET $MOUNT_PATH
+borg mount $BORG_REPO $MOUNT_PATH
 
 $LATEST_ARCHIVE=$(ls -Art $MOUNT_PATH | tail -n 1)
 
