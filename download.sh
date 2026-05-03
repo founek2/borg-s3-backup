@@ -57,6 +57,9 @@ printf "\n\n${bold}Backup download success.\nSummary${normal}:\n\n"
 echo "${bold}Cloud service:${normal} ${accent}${CLOUD_SERVICE_NAME}${normal}"
 echo "${bold}Bucket size:${normal} ${accent}${BUCKET_SIZE_GB}${normal}"
 
+# Remove exclusive lock if present
+rm -rf $1/lock.exclusive
+
 echo "Running borg validation"
 borg check $DOWNLOAD_FOLDER
 

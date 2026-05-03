@@ -7,6 +7,3 @@ export AWS_SECRET_ACCESS_KEY=
 export AWS_ENDPOINT_URL=https://node2.s3.iotdomu.cz
 
 ./download.sh $1
-
-# Remove exclusive lock if present
-rm -rf $1/lock.exclusive
