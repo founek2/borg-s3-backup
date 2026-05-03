@@ -6,11 +6,11 @@ if [[ ! "$BORG_REPO" ]]; then
   exit 1
 fi
 
-$MOUNT_PATH=$1
+MOUNT_PATH=$1
 
 borg mount $BORG_REPO $MOUNT_PATH
 
-$LATEST_ARCHIVE=$(ls -Art $MOUNT_PATH | tail -n 1)
+LATEST_ARCHIVE=$(ls -Art $MOUNT_PATH | tail -n 1)
 
 FOLDERS="var/deploy
 var/data"
