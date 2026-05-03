@@ -18,7 +18,7 @@ if [[ ! -d "$DOWNLOAD_FOLDER" ]]; then
   exit 1
 fi
 
-if [ "$(ls -A $DOWNLOAD_FOLDER)" ]; then
+if [[ "$(ls -A $DOWNLOAD_FOLDER)" ]] && [ "$FORCE" != "y" ]; then
   printf "\n ** The folder ${DOWNLOAD_FOLDER} is not empty.\n\n"
   exit 1
 fi
