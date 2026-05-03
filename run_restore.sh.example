@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+export BORG_PASSPHRASE=
+export BORG_S3_BACKUP_BUCKET=
+
+if [[ ! "$1" ]]; then
+  printf "\n ** Please provide the folder where the backup should be mounted.\n"
+  printf "\n Example: ${0} /path/to/mount/folder\n\n"
+  exit 1
+fi
+
+./restore.sh $1
