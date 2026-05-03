@@ -4,6 +4,7 @@ set -e
 export BORG_S3_BACKUP_BUCKET=
 export AWS_ACCESS_KEY_ID=
 export AWS_SECRET_ACCESS_KEY=
+export AWS_ENDPOINT_URL=https://node2.s3.iotdomu.cz
 
 ./download.sh $1
 

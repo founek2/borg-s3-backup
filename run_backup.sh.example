@@ -6,6 +6,7 @@ export BORG_REPO=
 export BORG_S3_BACKUP_BUCKET=
 export AWS_ACCESS_KEY_ID=
 export AWS_SECRET_ACCESS_KEY=
+export AWS_ENDPOINT_URL=https://node2.s3.iotdomu.cz
 
 # redirect to log file: ./script.sh > /var/log/backup.log 2>&1
 ./script.sh
