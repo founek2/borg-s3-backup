@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 bold=$(tput bold)
 normal=$(tput sgr0)
@@ -63,4 +64,4 @@ rm -rf $1/lock.exclusive
 echo "Running borg validation"
 borg check $DOWNLOAD_FOLDER
 
-printf "\n\n${bold}Before you can use it with borg, you need to move ${secondary_accent}${DOWNLOAD_FOLDER} ${normal}${bold}to ${secondary_accent}${BORG_REPO}${normal}\n\n"
+echo "Repository downloaded and validated successfully."
