@@ -11,6 +11,15 @@ fi
 # Prune operation is not important, s3 sync is - do not exit were this to fail
 echo "Validating repository integrity and compacting..."
 
+if [[ -z "$SKIP_EXPENSIVE_CHECK" ]]; then
+	echo "Checking repository integrity..."
+	borg check $BORG_REPO
+fi
+
+echo "Prunning and compacting..."
+borg prune -v --list --keep-daily=7 --keep-weekly=4 --keep-monthly=3
+borg compact
+
 SYNC_COMMAND="aws s3 sync ${BORG_REPO} s3://${BORG_S3_BACKUP_BUCKET} --delete --exclude 'lock.exclusive/*'"
 
 # Sync borg repo to s3

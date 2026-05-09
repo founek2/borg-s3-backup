@@ -35,7 +35,7 @@ NOW=$(date +%s)
 
 BUCKET_URI="s3://${BORG_S3_BACKUP_BUCKET}"
 BUCKET_SIZE=`aws s3 ls --summarize --recursive ${BUCKET_URI} | tail -1 | awk '{print \$3}'`
-DOWNLOAD_COMMAND="aws s3 sync ${BUCKET_URI} ${DOWNLOAD_FOLDER}"
+DOWNLOAD_COMMAND="aws s3 sync --delete ${BUCKET_URI} ${DOWNLOAD_FOLDER}"
 
 BUCKET_SIZE_GB=`numfmt --to iec --format "%8.4f" ${BUCKET_SIZE}`
 DOWNLOAD_FOLDER_AVAILABLE_GB=`numfmt --to iec --format "%8.4f" ${DOWNLOAD_FOLDER_AVAILABLE}`
